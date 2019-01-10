@@ -12,6 +12,7 @@ class PublicController extends Controller
     	return view('admin.public.login');
     }
 
+
     //验证数据
     public function check(Request $request){
         //开始自动验证
@@ -42,6 +43,7 @@ class PublicController extends Controller
 
 
     public function logout(){
+        
         Auth::guard('admin')->logout();
         return redirect('/admin/public/login');
     }
